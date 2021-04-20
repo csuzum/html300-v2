@@ -4,3 +4,122 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+* {
+  box-sizing: border-box;
+}
+
+// color library
+$dark-gray: #656565;
+$med-gray: #d3d3d3;
+$lt-gray: #f6f5f6;
+
+// font library
+$font-stack: "Arial", Helvetica, sans-serif;
+$heading: bold;
+$occupation: lighter;
+
+// employee card main container
+.employee-card {
+  display: flex;
+  width: 90%;
+  margin: 1.5rem;
+  border: solid 3.2rem $med-gray;
+  border-radius: .3rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .employee-card {
+    width: 94%;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .employee-card {
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: .5rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .employee-card {
+    border: solid 1rem $med-gray;
+    width: 88%;
+    padding: 1rem;
+  } 
+}
+
+// employee image & name container
+.name-container {
+  text-align: center;
+  img { 
+    border-radius: 50%;
+    width: 225px;  
+  }
+  h1 {
+    font-size: 1.8rem;
+    color: $dark-gray;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: $occupation;
+    font-style: italic;
+    color: $dark-gray;
+    line-height: .1rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .name-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .name-container {
+    img {
+      width: 200px;
+    }
+  }
+}
+
+// employee details container
+.profile-detail {
+  background-color: $lt-gray;
+  width: 35rem;
+  margin: .5rem .5rem .5rem 2rem; 
+  padding: 1.5rem 2rem 2rem;
+  color: $dark-gray;  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5rem;
+  }
+  li {
+    font-weight: $occupation;
+    .profile-bold {
+      font-weight: $heading;
+    }
+  }
+  .linkedin-logo {
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .profile-detail {
+    font-size: .8rem;
+    width: 99%;
+    padding-right: 1rem;
+    margin: 1rem 0 0;
+    ul {
+      line-height: 2.5rem;
+    }
+    .linkedin-logo {
+      width: 18px;
+    }
+  } 
+}
