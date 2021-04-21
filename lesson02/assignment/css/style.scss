@@ -1,55 +1,49 @@
+
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
-* {
-  box-sizing: border-box;
-}
-
 // color library
-$dark-gray: #656565;
-$med-gray: #d3d3d3;
-$lt-gray: #f6f5f6;
+$base-gray: #5a5654;
 
-// font library
-$font-stack: "Arial", Helvetica, sans-serif;
+// font styles
 $heading: bold;
 $occupation: lighter;
+
+.main {
+  @media screen and (max-width: 414px) {
+    padding: 1rem;
+  }
+}
 
 // employee card main container
 .employee-card {
   display: flex;
-  width: 90%;
-  margin: 1.5rem;
-  border: solid 3.2rem $med-gray;
+  border: solid 3.2rem lighten( $base-gray, 40%);
   border-radius: .3rem;
   padding: 2rem;
-}
 
-@media screen and (max-width: 800px) {
-  .employee-card {
-    width: 94%;
-    padding-left: 2rem;
+  @media screen and (max-width: 800px) {
+      padding-left: 2rem;
   }
-}
-
-@media screen and (max-width: 760px) {
-  .employee-card {
-    flex-wrap: wrap;
-    width: 100%;
-    padding-left: .5rem;
+  
+  @media screen and (max-width: 765px) {
+      flex-wrap: wrap;
+      padding-left: .5rem;
   }
-}
 
-@media screen and (max-width: 415px) {
-  .employee-card {
-    border: solid 1rem $med-gray;
-    width: 88%;
+  @media screen and (max-width: 414px) {
+    border-width: 1.5rem;
     padding: 1rem;
-  } 
+  }
+
+  @media screen and (max-width: 360px) {
+    border-width: 1.5rem;
+  }
 }
+
 
 // employee image & name container
 .name-container {
@@ -60,38 +54,35 @@ $occupation: lighter;
   }
   h1 {
     font-size: 1.8rem;
-    color: $dark-gray;
+    color: $base-gray;
   }
   h2 {
     font-size: 1.25rem;
     font-weight: $occupation;
     font-style: italic;
-    color: $dark-gray;
+    color: $base-gray;
     line-height: .1rem;
   }
-}
 
-@media screen and (max-width: 760px) {
-  .name-container {
+  @media screen and (max-width: 760px) {
     width: 100%;
   }
-}
 
-@media screen and (max-width: 415px) {
-  .name-container {
+  @media screen and (max-width: 415px) {
     img {
       width: 200px;
     }
   }
 }
 
+
 // employee details container
 .profile-detail {
-  background-color: $lt-gray;
+  background-color: lighten( $base-gray, 60%);
   width: 35rem;
   margin: .5rem .5rem .5rem 2rem; 
   padding: 1.5rem 2rem 2rem;
-  color: $dark-gray;  
+  text-decoration-color: $gray;  
   ul {
     list-style-type: none;
     margin: 0;
@@ -107,13 +98,15 @@ $occupation: lighter;
   .linkedin-logo {
     vertical-align: middle;
   }
-}
 
-@media screen and (max-width: 415px) {
-  .profile-detail {
+  @media screen and (max-width: 768px) {
+    font-size: .9rem;
+  }
+
+  @media screen and (max-width: 415px) {
     font-size: .8rem;
-    width: 99%;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: .5rem;
     margin: 1rem 0 0;
     ul {
       line-height: 2.5rem;
@@ -121,5 +114,5 @@ $occupation: lighter;
     .linkedin-logo {
       width: 18px;
     }
-  } 
+  }
 }
