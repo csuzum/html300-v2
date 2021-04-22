@@ -1,0 +1,37 @@
+WEBSITE PROPOSAL
+For: Changes Parent Support Group (CPSN)
+By: Cindy Suzumura
+04/12/2021
+
+PROBLEM OVERVIEW
+CPSN is a nonprofit that has been a well kept secret for 26 years. They provide an invaluable service by confidentially supporting struggling parents of acting-out teens & adult children and providing them with personalized and actionable plans to bring about change in their behaviors. When parents change their behavior, it motivates their teen & young adult children to change in response. CPSN is nearly 100% operated by members/volunteers.    
+
+Nearly all members have found the group through word-of-mouth. As a result most fundraising donations have come from members/past members. They need an updated website to help raise visibility, provide current resources, and help build their community.
+
+SOLUTION
+Design: update website with new compelling visuals along with member stories in an easy to navigate layout to better engage visitors on the site. Improve website responsiveness on mobile. Improve website SEO.
+
+Features: 
+  • Donation button on every page
+  • Social media links
+  • Events & news email sign-up
+  • Blog
+  • Management & members password protected sections for access to program materials library
+  • Maps of meeting locations
+  • Helpline phone on every page
+  • Resources for parents in crisis
+  • Special events section
+
+Pages:
+  • Home
+  • About
+  • Resources
+  • Blog (connected to social media)
+  • Ways to help
+  • Contact/meeting locations
+  • Management - password protected
+  • Members - password protected
+
+API:
+  • to provide up-to-date resources: some thoughts are books, articles, links on parenting, addiction, self-care, and mental health
+  • Access data from Little Green Light (donor management platform) to update fundraising campaigns toward a goal
