@@ -12,6 +12,12 @@ $base-gray: #5a5654;
 $heading: bold;
 $occupation: lighter;
 
+@mixin border-radius($radius: .8rem) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
 .main {
   @media screen and (max-width: 414px) {
     padding: 1rem;
@@ -20,9 +26,9 @@ $occupation: lighter;
 
 // employee card main container
 .employee-card {
+  @include border-radius;
   display: flex;
   border: solid 3.2rem lighten( $base-gray, 40%);
-  border-radius: .3rem;
   padding: 2rem;
 
   @media screen and (max-width: 800px) {
@@ -35,11 +41,13 @@ $occupation: lighter;
   }
 
   @media screen and (max-width: 414px) {
+    @include border-radius(.5rem);
     border-width: 1.5rem;
     padding: 1rem;
   }
 
   @media screen and (max-width: 360px) {
+    @include border-radius(.5rem);
     border-width: 1.5rem;
   }
 }
