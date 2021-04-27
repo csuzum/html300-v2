@@ -72,7 +72,7 @@ employees.forEach(function(el) {
         <li><span>Major: </span>${el.major}</li>
         <li><span>Email: </span>${el.email}</li>
         <li><span>LinkedIn URL: </span>${el.linkedInUrl}</li>
-        <li><span>Code Languages: </span>${el.codeLanguages.join(',')}</li>
+        <li><span>Code Languages: </span>${el.codeLanguages.join(', ')}</li>
     </div>
   `
   container.append(list)
