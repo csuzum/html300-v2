@@ -1,3 +1,4 @@
+// object array for employee cards
 const employees = [
   {
     "name": "Paolo Maldini",
@@ -53,12 +54,20 @@ const employees = [
   },
 ];
 
+// select html element by id
 const container = document.querySelector('#main-container')
 
+// loop through object array
 employees.forEach(function(el) {
+
+  // create article container inside selected element for each object
   let list = document.createElement('article')
+
+  // set class attribute for article elements
   list.setAttribute('class', 'employee-card')
-  list.innerHTML = ` 
+
+  // create elements for each object inside article elements
+  list.innerHTML = `
     <div class='name-container'>
       <img class='circle-img' src='./img/headshot.jpg' alt='face of beagle wearing a black bow tie'>
       <h1>${el.name}</h1>
@@ -71,9 +80,14 @@ employees.forEach(function(el) {
         <li><span>School: </span>${el.school}</li>
         <li><span>Major: </span>${el.major}</li>
         <li><span>Email: </span>${el.email}</li>
-        <li><span>LinkedIn URL: </span>${el.linkedInUrl}</li>
-        <li><span>Code Languages: </span>${el.codeLanguages.join(', ')}</li>
+        <li><span><img class="linkedin-logo" src="./img/linkedin.svg" alt="linkedin logo"></span> ${el.linkedInUrl}</li>
+        <div class='code-lang'>
+          <ul>
+            <li><span>Code Languages: </span>${el.codeLanguages.join(', ')}</li>
+          </ul>
+        </div>
     </div>
   `
+  // adds innerHTML inside article containers
   container.append(list)
 })
