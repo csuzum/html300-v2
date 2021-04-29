@@ -55,9 +55,6 @@ $breakpoint-small: "small";
 
   @include media-query($breakpoint-mobile) {
     flex-wrap: wrap;
-  }
-  @include media-query($breakpoint-small) {
-    @include border-radius(.5rem);
     border-width: 1.5rem;
     padding: 1rem;
   }
@@ -70,9 +67,6 @@ $breakpoint-small: "small";
     border-radius: 50%;
     width: 225px;
     @include box-shadow;
-    @include media-query($breakpoint-ipad) {
-      width: 180px;
-    }
     @include media-query($breakpoint-small) {
       width: 85%;
     }
@@ -130,7 +124,7 @@ $breakpoint-small: "small";
     padding-right: 1.5rem;
     margin: 1rem 0 0;
       ul {
-        line-height: 2.5rem;
+        line-height: 2rem;
       }
   }
 }
