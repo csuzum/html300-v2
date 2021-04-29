@@ -6,7 +6,7 @@
 
 // color library
 $base-gray: #5a5654;
-$border-gray: #bab4b1;
+$shadow-gray: #bab4b1;
 
 // font styles
 $heading: bold;
@@ -20,7 +20,7 @@ $occupation: lighter;
 }
 
 // box shadow for outside and inset
-@mixin box-shadow($horiz : .1em , $vert : .2em , $blur : .7em , $color : $border-gray , $inset : false) {
+@mixin box-shadow($horiz : .1em , $vert : .1em , $blur : .7em , $color : $shadow-gray , $inset : false) {
   @if $inset {
     -webkit-box-shadow:inset $horiz $vert $blur $color;
     -moz-box-shadow:inset $horiz $vert $blur $color;
@@ -33,7 +33,7 @@ $occupation: lighter;
 }
 
 .main {
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 20em) {
     padding: 1rem;
   }
 }
@@ -48,24 +48,14 @@ $occupation: lighter;
   margin-bottom: 3rem;
   padding: 2rem;
 
-  @media screen and (max-width: 800px) {
-      padding-left: 2rem;
+  @media screen and (max-width: 760px) {
+    flex-wrap: wrap;
   }
 
-  @media screen and (max-width: 765px) {
-      flex-wrap: wrap;
-      padding-left: .5rem;
-  }
-
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 415px) {
     @include border-radius(.5rem);
     border-width: 1.5rem;
     padding: 1rem;
-  }
-
-  @media screen and (max-width: 360px) {
-    @include border-radius(.5rem);
-    border-width: 1.5rem;
   }
 }
 
@@ -134,8 +124,8 @@ $occupation: lighter;
       line-height: 1.5rem;
     }
   }
-
-  @media screen and (max-width: 768px) {
+  
+  @media screen and (max-width: 760px) {
     font-size: .9rem;
   }
 
