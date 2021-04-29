@@ -12,6 +12,11 @@ $shadow-gray: #bab4b1;
 $heading: bold;
 $occupation: lighter;
 
+// mobile responsiveness
+$breakpoint-mobile: "mobile";
+$breakpoint-ipad: "ipad";
+$breakpoint-small: "small";
+
 // border radius
 @mixin border-radius($radius: .8rem) {
   -webkit-border-radius: $radius;
@@ -48,11 +53,10 @@ $occupation: lighter;
   margin-bottom: 3rem;
   padding: 2rem;
 
-  @media screen and (max-width: 760px) {
+  @include media-query($breakpoint-mobile) {
     flex-wrap: wrap;
   }
-
-  @media screen and (max-width: 415px) {
+  @include media-query($breakpoint-small) {
     @include border-radius(.5rem);
     border-width: 1.5rem;
     padding: 1rem;
@@ -66,6 +70,12 @@ $occupation: lighter;
     border-radius: 50%;
     width: 225px;
     @include box-shadow;
+    @include media-query($breakpoint-ipad) {
+      width: 180px;
+    }
+    @include media-query($breakpoint-small) {
+      width: 85%;
+    }
   }
   h1 {
     font-size: 1.8rem;
@@ -78,16 +88,6 @@ $occupation: lighter;
     font-style: italic;
     color: $base-gray;
     margin-top: .5rem;
-  }
-
-  @media screen and (max-width: 760px) {
-    width: 100%;
-  }
-
-  @media screen and (max-width: 415px) {
-    img {
-      width: 200px;
-    }
   }
 }
 
@@ -124,21 +124,13 @@ $occupation: lighter;
       line-height: 1.5rem;
     }
   }
-  
-  @media screen and (max-width: 760px) {
-    font-size: .9rem;
-  }
-
-  @media screen and (max-width: 415px) {
+  @include media-query($breakpoint-mobile) {
     font-size: .8rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin: 1rem 0 0;
-    ul {
-      line-height: 2.5rem;
-    }
-    .linkedin-logo {
-      width: 18px;
-    }
+      ul {
+        line-height: 2.5rem;
+      }
   }
 }
