@@ -5,8 +5,8 @@
 @import 'components.content';
 
 // color library
-$base-gray: #5a5654;
-$shadow-gray: #bab4b1;
+// $base-gray: #5a5654;
+// $shadow-gray: #bab4b1;
 
 // font styles
 $heading: bold;
@@ -65,7 +65,6 @@ $breakpoint-small: "small";
   text-align: center;
   img {
     border-radius: 50%;
-    width: 225px;
     @include box-shadow;
     @include media-query($breakpoint-small) {
       width: 85%;
