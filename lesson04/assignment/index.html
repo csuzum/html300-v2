@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <main class="main">
-    <!-- parent stories grid section -->
-    <div class="Stories">
-      <h1 class="Stories__title">Our Parent Stories</h1>
-      <div class="Stories__title__cols">
-        <div class="Stories__title__cols__col" ontouchstart="this.classList.toggle('hover');">
-          <div class="Stories__title__cols__col__container">
-            <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/mom-two-daughters.jpg)">
-              <div class="Stories__title__cols__col__container__front__inner">
-                <p class="Stories__title__cols__col__container__front__inner__p"> Changes offers
-                </p>
-              </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CPSN Parent Stories</title>
+  </head>
+  <body>
+    <main class="main">
+      <!-- header -->
+      <header class="site-header">
+        <div class="site-header__help">
+          <p class="site-header__help__phone">Need help? Call <span class="site-header__help__phone__b">  &nbsp;1-888-468-2620</span></p>
+        </div>
+        <nav class="site-header__nav">
+          <div class="site-header__nav__top-left">
+            <a href="www.cpsn.org" rel="home" class="site-header__nav__top-left__link">
+            <img src="./images/cpsn-logo-rev.png" alt="Changes Parent Support Network logo" class="site-header__nav__top-left__link__cpsn-logo">
+            </a>
+          </div>
+          <div class=site-header__nav__menu>
+            <!-- mobile nav hamburger -->
+            <div class="mobile">
+              <input id="toggle" type="checkbox">
+              <label class="toggle-container" for="toggle">
+              <span class="button button-toggle"></span>
+              </label>
+              <!-- Mobile Nav Menu -->
+              <nav class="nav">
+                <a class="nav-item" href="">About</a>
+                <a class="nav-item" href="">Get Help</a>
+                <a class="nav-item" href="">Support Changes</a>
+                <a class="nav-item" href="">Contact</a>
+                <a class="nav-item" href="">Donate</a>
+              </nav>
             </div>
-            <div class="Stories__title__cols__col__container__back">
-              <div class="Stories__title__cols__col__container__back__inner">
-                <p class="Stories__title__cols__col__container__back__inner__p">I feel good every time that I help another family in crisis, knowing that I may have made the world a little better place that day.</p>
+            <!-- Desktop nav -->
+            <ul class="site-header__nav__menu__desktop">
+              <li class="site-header__nav__menu__desktop__item"><a href="#">About</a></li>
+              <li class="site-header__nav__menu__desktop__item"><a href="#">Get Help</a></li>
+              <li class="site-header__nav__menu__desktop__item"><a href="#">Support Changes</a></li>
+              <li class="site-header__nav__menu__desktop__item"><a href="#">Contact</a></li>
+              <li class="site-header__nav__menu__desktop__item"><a href="#">Donate</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- parent stories grid section -->
+      <div class="Stories">
+        <h1 class="Stories__title">Our Parent Stories</h1>
+        <div class="Stories__title__cols">
+          <div class="Stories__title__cols__col" onclick="this.classList.toggle('hover');">
+            <div class="Stories__title__cols__col__container">
+              <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/mom-two-daughters.jpg)">
+                <div class="Stories__title__cols__col__container__front__inner">
+                  <p class="Stories__title__cols__col__container__front__inner__p"> Changes offers
+                  </p>
+                </div>
+              </div>
+              <div class="Stories__title__cols__col__container__back">
+                <div class="Stories__title__cols__col__container__back__inner">
+                  <p class="Stories__title__cols__col__container__back__inner__p">I feel good every time that I help another family in crisis, knowing that I may have made the world a little better place that day.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-          <div class="Stories__title__cols__col" ontouchstart="this.classList.toggle('hover');">
+          <div class="Stories__title__cols__col" onclick="this.classList.toggle('hover');">
             <div class="Stories__title__cols__col__container">
               <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/parents-group.jpg)">
                 <div class="Stories__title__cols__col__container__front__inner">
@@ -43,7 +81,7 @@
               </div>
             </div>
           </div>
-          <div class="Stories__title__cols__col" ontouchstart="this.classList.toggle('hover');">
+          <div class="Stories__title__cols__col" onclick="this.classList.toggle('hover');">
             <div class="Stories__title__cols__col__container">
               <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/father-teen-son.jpg)">
                 <div class="Stories__title__cols__col__container__front__inner">
@@ -58,7 +96,7 @@
               </div>
             </div>
           </div>
-          <div class="Stories__title__cols__col" ontouchstart="this.classList.toggle('hover');">
+          <div class="Stories__title__cols__col" onclick="this.classList.toggle('hover');">
             <div class="Stories__title__cols__col__container">
               <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/mom-adult-son.jpg)">
                 <div class="Stories__title__cols__col__container__front__inner">
@@ -73,7 +111,7 @@
               </div>
             </div>
           </div>
-          <div class="Stories__title__cols__col" ontouchstart="this.classList.toggle('hover');">
+          <div class="Stories__title__cols__col" onclick="this.classList.toggle('hover');">
             <div class="Stories__title__cols__col__container">
               <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/frustrated-mom-son.jpg)">
                 <div class="Stories__title__cols__col__container__front__inner">
@@ -88,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div class="Stories__title__cols__col" ontouchstart="this.classList.toggle('hover');">
+          <div class="Stories__title__cols__col" onclick="this.classList.toggle('hover');">
             <div class="Stories__title__cols__col__container">
               <div class="Stories__title__cols__col__container__front" style="background-image: url(./images/mom-daughter-hug.jpg)">
                 <div class="Stories__title__cols__col__container__front__inner">
@@ -105,6 +143,6 @@
           </div>
         </div>
       </div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>
