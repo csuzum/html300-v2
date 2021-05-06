@@ -1,13 +1,24 @@
 // Colors
 $gray: #c7c4c7;
+$lt-gray: #f3f2f3;
 $dark-gray: #757373;
 $white: #ffffff;
 $black: #000000;
 $orange: #EC6A13;
 $lt-orange: #f7c19d;
 $changes-blue: #1395EC;
+$lt-blue: #53b7fa;
 
 // font styles
 $sans-serif: 'Montserrat', Helvetica, Verdana, sans-serif;
 $light: 300;
+$medium: 400;
+$bold: 600;
+$xbold: 700;
 $title: 3rem;
+
+
+// mobile menu variables
+$items: 5;
+$transition-duration: 0.5s;
+$transition-delay: 0.05s;
