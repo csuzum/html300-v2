@@ -1,45 +1,59 @@
+
+
 // Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+// media queries
+@mixin tablet {
+  @media screen and (max-width: 860px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 567px) {
+    @content;
+  }
+}
+
+.mobileShow {display: none;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 567px){ 
+    .mobileShow {display: inline;}
+  }
+
+  .mobileHide { display: inline; }
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 567px){
+    .mobileHide { display: none;}
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: $lt-gray;
   font-family: $sans-serif;
+  background-color: $gray;
+
+  @include mobile {
+    background-color: $white;
 }
 
 main {
-  box-sizing: border-box;
   background-color: $white;
-}
-
-.main-grid__header {
-  grid-area: header;
-}
-
-// .main-grid__aside {
-//   grid-area: sidebar;
-// }
-
-.main-grid__hero {
-  grid-area: hero;
-}
-
-.main-grid__content {
-  grid-area: content;
-}
-
-.main-grid__highlight1 {
-  grid-area: highlight1;
-}
-
-.main-grid__highlight2 {
-  grid-area: highlight2;
-}
-
-.main-grid__footer {
-  grid-area: footer;
 }
 
 .main-grid {
@@ -52,24 +66,51 @@ main {
                         ". content content content content"
                         ". highlight1 highlight1 highlight2 highlight2"
                         "footer footer footer footer footer";
-  grid-template-rows: 1fr;
+
+  @include mobile {
+    grid-template-areas:  "header"
+                          "hero"
+                          "content"
+                          "aside-mobile"
+                          "highlight1"
+                          "highlight2"
+                          "footer";
+  }
 
   // header
   &__header {
-    height: 7rem;
+    grid-area: header;
+    height: 8rem;
     display: grid;
-    grid-template-columns: 3fr 7fr 2fr;
-    grid-template-areas:  "logo call donate"
-                          "logo nav donate";
+    grid-template-columns: 3fr 1fr 6fr 2fr;
+    grid-template-areas:  "logo . call donate"
+                          "logo . nav donate";
+
+    @include mobile {
+      height: auto;
+      grid-template-areas: "logo logo logo logo"
+                            "call call call call"
+                            "donate donate donate donate"
+                            "nav nav nav nav"
+    }                     
     
     &__logo {
       grid-area: logo;
-      display: flex;
-      align-items: center;
-      padding-left: 6rem;
+      padding: 1.2rem 0rem 0rem 5.5rem;
+
+      @include mobile {
+        display: unset;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5rem 0rem 0rem 0rem;
+      }
 
       &__img {
-        width: 10rem;
+        width: 12rem;
+
+        @include mobile {
+          width: 30rem;
+        }
       }
     }
 
@@ -81,6 +122,12 @@ main {
       text-align: right;
       margin: 0;
       padding: 1.3rem 1.5rem 0rem 0rem;
+
+      @include mobile {
+        font-size: 3.5rem;
+        text-align: center;
+        padding: 4rem;
+      }
 
       &__phone {
         font-weight: $bold;
@@ -94,11 +141,19 @@ main {
       background-color: $orange;
       color: white;
 
+      @include mobile {
+        height: 8rem;
+      }
+
       &__p {
         font-size: 1.5rem;
-        font-weight: $medium;
+        font-weight: $bold;
         margin-left: auto;
         margin-right: auto;
+
+        @include mobile {
+          font-size: 3rem;
+        }
       }
     }
 
@@ -112,11 +167,20 @@ main {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
+
+        @include mobile {
+          display: unset;
+          font-weight: $bold;
+          font-size: 3.5rem;
+          line-height: 6.5rem;
+          text-align: center;
+        }
       }
     }
   }
 
   &__hero {
+    grid-area: hero;
     font-family: $sans-serif;
     font-weight: $light;
 
@@ -128,26 +192,43 @@ main {
   }
 
   &__content {
+    grid-area: content;
     font-family: $sans-serif;
     font-weight: $light;
-    padding-right: 3rem;
+    padding: 1rem 3rem 2rem 0rem;
+
+    @include mobile {
+      width: 95%;
+      padding: 1rem 4rem 1rem 4rem;
+    }
 
     &__h1 {
       font-size: 1.9rem;
       font-weight: $medium;
       color: $changes-blue;
       margin-top: 1rem;
+
+      @include mobile {
+        font-size: 3.2rem;
+        text-align: center;
+      }
     }
 
     &__p {
       font-size: 1.2rem;
       line-height: 2rem;
+
+      @include mobile {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding-bottom: 2rem;
+      }
     }   
   }
 
   &__aside {
     width: 23rem;
-    font-family: $sans-serif;
     grid-row-start: hero-start;
     grid-row-end: footer-start;
     grid-column-start: hero-start;
@@ -167,6 +248,7 @@ main {
       background-color: $orange;
       border-top: 1rem solid white;
       border-right: 1rem solid white;
+      padding: 2rem 0rem;
       
       &__p {
         font-size: 1.6rem;
@@ -174,7 +256,7 @@ main {
         font-weight: $light;
         color: $white;
         text-align: center;
-        padding: 1rem 2rem 0rem 2rem;
+        padding: 1rem 2rem 2rem 2rem;
 
         &__father {
           font-size: 1.3rem;
@@ -205,93 +287,135 @@ main {
         font-weight: $light;
         color: $white;
         text-align: center;
-        padding: 1rem 2rem 1rem 2rem;
+        padding: 0rem 2rem 1rem 2rem;
 
         &__head {
-          font-size: 2rem;
+          font-weight: $medium;
           text-transform: uppercase;
-        }
+          padding-top: 2rem;
+
+        }        
       }
     }
   }
 
   &__highlight1 {
+    grid-area: highlight1;
     width: 22rem;
+
+    @include mobile {
+      width: 100%;
+    }
 
     &__img {
       width: 22rem;
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &__p {
       font-size: 1.2rem;
       font-weight: $light;
       line-height: 1.8rem;
+      padding: 1rem 0rem;
+
+      @include mobile {
+        width: 90%;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding: 2rem 0rem 2rem 3rem;
+      }
     }
   }
 
   &__highlight2 {
+    grid-area: highlight2;
     width: 22rem;
+
+    @include mobile {
+      width: 100%;
+    }
 
     &__img {
       width: 22rem;
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &__p {
       font-size: 1.2rem;
       font-weight: $light;
       line-height: 1.8rem;
-    }
+      padding: 1rem 0rem;
+
+      @include mobile {
+        width: 90%;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding: 2rem 0rem 2rem 3rem;
+      }
+    }  
   }
   
   &__footer {
+    grid-area: footer;
+    display: flex;
     background-color: $med-gray;
     font-weight: $light;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    color: $white;
-    height: 20rem;
-    padding: 3rem 0rem 3rem 5rem;
+    color: white;
+    height: auto;
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    grid-template-areas:  "changes signup connect";
-    grid-gap: 3rem;
+    padding: 3rem 4rem 3rem 4rem;
 
     &__changes {
-      grid-area: changes;
+      width: 28rem;
 
       &__logo {
-        width: 10rem;   
+        width: 12rem;
       }
 
       &__phone {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
       }
     }
 
     &__signup {
-      grid-area: signup;
-
+      width: 22rem;
+      padding-right: 3rem;
+ 
       &__heading {
-        font-size: 2rem;
-        font-weight: $light;
-        line-height: .3rem;
+        font-weight: $bold;
+        line-height: 3rem;
       }
     }
 
     &__connect {
-      grid-area: connect;
-      padding-right: 3rem;
+      width: 16rem;
 
       &__heading {
-        font-size: 2rem;
-        font-weight: $light;
-        line-height: .3rem;
+        font-weight: $bold;
+        line-height: 3rem;
       }
 
-      &__social i {
-        padding-right: 1.7rem;
+      &__social {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0rem;
+      }
+
+      &__copyright {
+        font-size: 1rem;
       }
     }
-  } 
-} 
+  }
+}
+}
