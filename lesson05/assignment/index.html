@@ -2,129 +2,111 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-      <script src="https://kit.fontawesome.com/05aeafdbc2.js" crossorigin="anonymous"></script>
-      <title>Assignment 05 - CSS Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/05aeafdbc2.js" crossorigin="anonymous"></script>
+    <title>Assignment 05 - CSS Grid</title>
   </head>
-    <body>
-      <main class="main-grid">
-        
-        <header class="main-grid__header">
-
-          <div class="main-grid__header__logo">
+  <body>
+    <main class="main-grid">
+      <header class="main-grid__header">
+        <div class="main-grid__header__logo">
           <img class="main-grid__header__logo__img" src="./images/cpsn-logo.png">
+        </div>
+        <p class="main-grid__header__call">Need help? <span class="main-grid__header__call__phone">Call 1-888-000-0000</span></p>
+        <div class="main-grid__header__donate">
+          <p class="main-grid__header__donate__p">Donate</p>
+        </div>
+        <nav class="main-grid__header__nav">
+          <ul class="main-grid__header__nav__items">
+            <li class="main-grid__header__nav__items__item">About</li>
+            <li class="main-grid__header__nav__items__item">Get Help</li>
+            <li class="main-grid__header__nav__items__item">Support Changes</li>
+            <li class="main-grid__header__nav__items__item">News & Events</li>
+            <li class="main-grid__header__nav__items__item">Contact</li>
+          </ul>
+        </nav>
+      </header>
+      <div class="main-grid__hero">
+        <img class="main-grid__hero__img" src="./images/frustrated-mom-son-crop.jpg">
+      </div>
+      <div class="main-grid__quote" id="mobileShow">
+        <h1 class="main-grid__quote__head">Help for parents</h1>
+        <p class="main-grid__quote__p">I was a basket-case when we joined changes. Our son was using drugs, drug dealing and failing school. The group helped me by confronting me about the ways in which I was enabling our son.
+          <br><span class="main-grid__quote__p__father">~ father of 15 year-old son</span>
+        </p>
+      </div>
+      <div class="main-grid__content">
+        <h1 class="main-grid__content__h1">Are you struggling to find successful parenting solutions?</h1>
+        <h1 class="main-grid__content__h1">Do you want to regain control of your home and guide your children to accept responsibility for their behavior?</h1>
+        <p class="main-grid__content__p">Changes Parent Support Network is a structured, peer-led program that provides support to parents struggling with children who are engaging in oppositional and self-destructive behaviors. Changes offers hope, help, support and relief from feeling overwhelmed and alone. We invite you to explore this website for information about our philosophy, our structured approach and meeting schedules.</p>
+      </div>
+      <aside class="main-grid__aside" id="mobileHide">
+        <h1 class="main-grid__aside__h1">Help for parents</h1>
+        <div class="main-grid__aside__box">
+          <p class="main-grid__aside__box__p">I was a basket-case when we joined changes. Our son was using drugs, drug dealing and failing school. The group helped me by confronting me about the ways in which I was enabling our son.
+            <br><span class="main-grid__aside__box__p__father">~ father of 15 year-old son</span>
+          </p>
+          <div class="main-grid__aside__box__wrapper">
+            <p class="main-grid__aside__box__wrapper__intro">An Introduction to Changes</p>
+            <img class="main-grid__aside__box__wrapper__img" src="./images/father-teen-son-crop.jpg"> 
           </div>
-
-          <p class="main-grid__header__call">Need help? <span class="main-grid__header__call__phone">Call 1-888-000-0000</span></p>
-
-          <div class="main-grid__header__donate">
-            <p class="main-grid__header__donate__p">Donate</p>
+          <div class="main-grid__aside__box__mission">
+            <h3 class="main-grid__aside__box__mission__head">Mission</h3>
+            <p>Changes Parent Support Network fosters healthy families by equipping parents with tools and support to change their behavior.</p>
+            <h3 class="main-grid__aside__box__mission__head">Vision</h3>
+            <p>Changes brings hope to parents in our communities by connecting them to strong, sustainable groups.</p>
           </div>
-
-          <nav class="main-grid__header__nav">
-            <ul class="main-grid__header__nav__items">
-              <li class="main-grid__header__nav__items__item">About</li>
-              <li class="main-grid__header__nav__items__item">Get Help</li>
-              <li class="main-grid__header__nav__items__item">Support Changes</li>
-              <li class="main-grid__header__nav__items__item">News & Events</li>
-              <li class="main-grid__header__nav__items__item">Contact</li>
-            </ul>
-          </nav>
-        </header>
-        
-          <div class="main-grid__hero">
-            <img class="main-grid__hero__img" src="./images/frustrated-mom-son-crop.jpg">
-          </div>
-
-          <!-- <div class="main-grid__heading mobileShow">
-            <h1 class="main-grid__heading__h1 mobileShow">Help for parents</h1>
-          </div> -->
-
-          <div class="main-grid__content">
-            <h1 class="main-grid__content__h1">Are you struggling to find successful parenting solutions?</h1>
-            <h1 class="main-grid__content__h1">Do you want to regain control of your home and guide your children to accept responsibility for their behavior?</h1>
-            <p class="main-grid__content__p">Changes Parent Support Network is a structured, peer-led program that provides support to parents struggling with children who are engaging in oppositional and self-destructive behaviors. Changes offers hope, help, support and relief from feeling overwhelmed and alone. We invite you to explore this website for information about our philosophy, our structured approach and meeting schedules.</p>
-          </div>
-
-          <aside class="main-grid__aside mobileHide">
-            <h1 class="main-grid__aside__h1">Help for parents</h1>
-            <div class="main-grid__aside__box">
-            
-              <p class="main-grid__aside__box__p">I was a basket-case when we joined changes. Our son was using drugs, drug dealing and failing school. The group helped me by confronting me about the ways in which I was enabling our son.
-              <br><span class="main-grid__aside__box__p__father">~ father of 15 year-old son</span></p>
-
-              <div class="main-grid__aside__box__wrapper">
-                <p class="main-grid__aside__box__wrapper__intro">An Introduction to Changes</p> 
-                <img class="main-grid__aside__box__wrapper__img" src="./images/father-teen-son-crop.jpg"> 
-              </div>
-
-              <div class="main-grid__aside__box__mission">
-                <h3 class="main-grid__aside__box__mission__head">Mission</h3>
-                <p>Changes Parent Support Network fosters healthy families by equipping parents with tools and support to change their behavior.</p>
-                
-                <h3 class="main-grid__aside__box__mission__head">Vision</h3>
-                <p>Changes brings hope to parents in our communities by connecting them to strong, sustainable groups.</p>
-              </div>
-            </div>  
-          </aside>
-          
-          <!-- <aside class="main-grid__aside-mobile mobileShow">
-            
-            <div>     
-              <p class="main-grid__aside-mobile__box__p  mobileShow">I was a basket-case when we joined changes. Our son was using drugs, drug dealing and failing school. The group helped me by confronting me about the ways in which I was enabling our son.
-              <br><span class="main-grid__aside-mobile__box__p__father  mobileShow">~ father of 15 year-old son</span></p>
+        </div>
+      </aside>
+      <div class="main-grid__intro" id="mobileShow">
+        <p class="main-grid__intro__head">An Introduction to Changes</p>
+        <img class="main-grid__intro__img" src="./images/father-teen-son-crop.jpg"> 
+        <h3 class="main-grid__intro__MV">Mission</h3>
+        <p class="main-grid__intro__p">Changes Parent Support Network fosters healthy families by equipping parents with tools and support to change their behavior.</p>
+        <h3 class="main-grid__intro__MV">Vision</h3>
+        <p class="main-grid__intro__p">Changes brings hope to parents in our communities by connecting them to strong, sustainable groups.</p>
+      </div>
+      <div class="main-grid__highlight1">
+        <img class="main-grid__highlight1__img" src="./images/support.jpg">
+        <p class="main-grid__highlight1__p">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. </p>
+      </div>
+      <div class="main-grid__highlight2">
+        <img class="main-grid__highlight2__img" src="./images/mom-adult-son.jpg">
+        <p class="main-grid__highlight2__p">One common thread binds us together—we are all parenting a troubled youth or young adult. New attendees find they easily connect with other parents who are in a similar situation to their own.</p>
+      </div>
+      <footer class="main-grid__footer">
+        <div class="main-grid__footer__changes">
+          <img class="main-grid__footer__changes__logo" src="./images/cpsn-logo-rev.png">
+          <p class="main-grid__footer__changes__phone">Need help? Call 1-888-000-0000</p>
+          <p class="main-grid__footer__changes__address">office@cpsn.org<br>4401 2nd Ave NE, Seattle, WA 98105</p>
+        </div>
+        <div class="main-grid__footer__signup">
+          <h2 class="main-grid__footer__signup__heading">Sign up</h2>
+          <p>for the latest news from Changes</p>
+          <form class="main-grid__footer__signup__form" id="signup" name="signupForm" method="GET">
+            <div class="main-grid__footer__signup__email">
+              <label for="emailAddress">Email Address</label>
+              <input type="text" name="emailAddress" required id="emailAddress">
             </div>
-
-          </aside>  -->
-          
-          <div class="main-grid__highlight1">
-            <img class="main-grid__highlight1__img" src="./images/support.jpg">
-            <p class="main-grid__highlight1__p">Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. </p>
+          </form>
+        </div>
+        <div class="main-grid__footer__connect">
+          <h2 class="main-grid__footer__connect__heading">Let's Connect!</h2>
+          <div class="main-grid__footer__connect__social">
+            <i class="fab fa-facebook-square fa-3x"></i>
+            <i class="fab fa-twitter-square fa-3x"></i>
+            <i class="fab fa-youtube-square fa-3x"></i>
           </div>
-
-          <div class="main-grid__highlight2">
-            <img class="main-grid__highlight2__img" src="./images/mom-adult-son.jpg">
-            <p class="main-grid__highlight2__p">One common thread binds us together—we are all parenting a troubled youth or young adult. New attendees find they easily connect with other parents who are in a similar situation to their own.</p>
-          </div>
-        
-          <footer class="main-grid__footer">
-
-            <div class="main-grid__footer__changes">
-              <img class="main-grid__footer__changes__logo" src="./images/cpsn-logo-rev.png">
-              <p class="main-grid__footer__changes__phone">Need help? Call 1-888-000-0000</p>
-              <p class="main-grid__footer__changes__address">office@cpsn.org<br>4401 2nd Ave NE, Seattle, WA 98105</p>
-              
-            </div>
-
-            <div class="main-grid__footer__signup">
-              <h2 class="main-grid__footer__signup__heading">Sign up</h2>
-              <p>for the latest news from Changes</p>
-              <form class="main-grid__footer__signup__form" id="signup" name="signupForm" method="GET">
-                <div class="main-grid__footer__signup__email">
-                  <label for="emailAddress">Email Address</label>
-                  <input type="text" name="emailAddress" required id="emailAddress">
-                </div>
-              </form>
-            </div>
-
-            <div class="main-grid__footer__connect">
-              <h2 class="main-grid__footer__connect__heading">Let's Connect!</h2>
-              <div class="main-grid__footer__connect__social">
-                <i class="fab fa-facebook-square fa-3x"></i>
-                <i class="fab fa-twitter-square fa-3x"></i>
-                <i class="fab fa-youtube-square fa-3x"></i>
-              </div>
-              <p class="main-grid__footer__connect__copyright"><span><i class="far fa-copyright"></i></span>
-                2021 Changes Parent Support Network. All rights reserved.</p>
-            </div>
-
-            </div>
-          </footer>
-      
-        </main>
+          <p class="main-grid__footer__connect__copyright"><span><i class="far fa-copyright"></i></span>
+            2021 Changes Parent Support Network. All rights reserved.
+          </p>
+        </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
