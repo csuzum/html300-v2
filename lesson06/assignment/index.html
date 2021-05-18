@@ -4,12 +4,234 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
     <body>
-        <main class="main">
-          
+        <main class="fw-light">
+
+          <header>
+            <div class="text-center">
+            <img class="img-fluid w-50 pt-4 p-3" src="./images/cpsn-logo.png">
+          </div>
+            <h1 class="fw-light text-center text-info p-3">Need help?<br><span class="fw-bold">Call 1-888-000-0000</span></h1>
+
+            <div class="bg-info text-white text-center p-2">
+              <h2>Donate</h2>
+            </div>
+
+            <div class="collapse text-center" id="navbarToggleExternalContent">
+              <div class="bg-dark">
+                <a class="nav-link text-white h4" href="#">About</a>
+                <a class="nav-link text-white h4" href="#">Get Help</a>
+                <a class="nav-link text-white h4" href="#">Resources</a>
+                <a class="nav-link text-white h4" href="#">Support Changes</a>
+                <a class="nav-link text-white h4" href="#">Contact</a>
+                <!-- <span class="text-muted"></span> -->
+              </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </nav>
+          </header>
+          <h1 class="display-2 text-center pt-3 text-info">FAQs</h1>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Is Changes right for me?</button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Members attend because their children are engaging in behaviors that are disrupting the home. Members include:
+                  <ul>
+                    <li>Couples</li>
+                    <li>Single Parents</li>
+                    <li>Step-Parents</li>
+                    <li>Guardians</li>
+                    <li>Grandparents</li>
+                    <li>Anyone who is parenting a child is welcome</li>
+                  </ul>
+                  Although some parents attend for help with their adult children, most have children between ages 13 and 22.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What behaviors can Changes help me address?</button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">Typical problem behaviors can be:
+                  <ul>
+                    <li>Violent or abusive</li>
+                    <li>Oppositional and defiant</li>
+                    <li>Failing grades or not attending school</li>
+                    <li>Substance abuse</li>
+                    <li>Stealing at home or shoplifting</li>
+                    <li>Gang involvement</li>
+                    <li>Running away</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What makes Changes unique from other support groups?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  One common thread binds us together—we are all parenting a troubled youth. New attendees find they easily connect with other parents who are in a similar situation to their own. Our groups encourage members to meet outside of weekly meetings and support each other in person or over the phone. Each week we call each other to check on how the week is going.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How are meetings structured?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Meetings are structured to help us create both short-term and long-term goals.
+                  <ul>
+                    <li>At meetings we form in groups of four to discuss the previous week.</li>
+                    <li>Each of us reports on the progress we have made toward our goal during the previous week.</li>
+                    <li>We provide support to each other by listening, asking questions and showing them empathy.</li>
+                    <li>We also use this small group to form our short-term goal for the upcoming week.</li>
+                    <li>We also use this small group to form our short-term goal for the upcoming week.</li>
+                    <li>Focusing on these goals provides manageable and reachable milestones for the parent.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">What can I expect when I attend my first Changes meeting?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Taking that first step for help can be difficult, and scary, but most first-night parents leave with a new feeling of hope. New parents meet together in a small group on their first night. An experienced member-parent explains the program structure and gives you a chance to talk a bit about your situation and ask questions. You will have an opportunity to watch other parents in small groups and get an idea of how the meetings work. At the end of the evening you will meet a parent who will call you during the week to help you with your issues at home and answer any lingering questions.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">What is a Changes Team?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Teams are an important element of the Changes program and a very powerful tool.
+                  <ul>
+                    <li>After about six weeks, we pick four to six members to be on our team.</li>
+                    <li>In addition to our weekly meetings teams gather at a time and place that works for all team members.</li>
+                    <li>Team members support the parent/s who created the team.</li>
+                    <li>The team will thoroughly examine the family’s issues and help develop an action plan.</li>
+                    <li>Team participation benefits all those involved.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="display-2 text-center pt-5 text-info">Contact Changes</h1>
+          <p class="fs-3 text-center px-5">Are you thinking about attending a meeting but would like more information? Fill out the form below or call our toll free information line, 1-888-468-2620, and leave a message. A parent volunteer will return your call.</p>
+
+          <form class="p-5" id="contactForm" name="contactForm" method="GET">
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="name" placeholder="At least first name required" required>
+            </div>
+
+            <div class="form-check pb-3">
+              <input class="form-check-input" type="checkbox" value="yes" id="callback" name="callback">
+              <label class="form-check-label" for="callback" checked="checked">Please have a parent volunteer call me at:
+              </label>
+
+              <div class="mb-3 pt-2">
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+              </div>
+
+              <div class="pb-2">
+              <select class="form-select" aria-label="Default select example" name="timeOfDay" id="timeOfDay">
+                <option selected>Best time to call:</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+              </div>
+
+              <div class=""></div>
+              <select class="form-select" aria-label="Default select example" name="timeZone" id="timeZone">
+                <option selected>Time zone</option>
+                <option value="pacific">Pacific</option>
+                <option value="mountain">Mountain</option>
+                <option value="central">Central</option>
+                <option value="eastern">Eastern</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="alaska">Alaska</option>
+              </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="signUp" id="signUp" value="yes">
+              <label class="form-check-label" for="signUp">Sign me up for Changes news and events
+              </label>
+            </div>
+            <div class="mb-3 pt-3">
+              <label for="message" class="form-label">Tell us a little about yourself, your child, and the behaviors you would like help with. (200 character limit)</label>
+              <textarea class="form-control" name="message" id="message" rows="6" maxlength="2000" checked="checked"></textarea>
+            </div>
+
+            <button class="btn btn-info text-white btn-primary" type="submit">Submit</button>
+
+            <!-- Button trigger modal -->
+            <!-- <button  class="btn btn-info text-white btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>  -->
+
+
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Congratulations!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    You've taken the first step to finding hope, help, support and relief from feeling overwhelmed and alone.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+
         </main>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="./contact-form.js"></script>
     </body>
 </html>
