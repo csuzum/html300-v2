@@ -15,7 +15,18 @@
         <div class="text-center">
           <img class="img-fluid w-50 pt-4 p-3" src="./images/cpsn-logo.png" alt="Changes Parent Support Network logo">
         </div>
-        <h1 class="fw-light text-center text-info p-3">Need help?<br><span class="fw-bold">Call 1-888-000-0000</span></h1>
+        <div class="text-center bg-image" style="
+        background-image: url('./images/frustrated-mom-daughter.jpg');
+        height: 250px;">
+          <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h1 class="display-2 fw-lighter lh-1">Need Help?</h1>
+                <h1 class="display-2 fw-lighter lh-1">Call<br>000-000-0000</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="bg-info text-white text-center p-2">
           <h2>Donate</h2>
         </div>
@@ -38,12 +49,12 @@
         </nav>
       </header>
       <h1 class="display-2 text-center pt-3 text-info">FAQs</h1>
-      <div class="accordion" id="accordionExample">
+      <div class="accordion-collapse" id="accordionExample">        
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Is Changes right for me?</button>
+            <button class="accordion-button collapsed bg-light px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Is Changes right for me?</button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               Members attend because their children are engaging in behaviors that are disrupting the home. Members include:
               <ul>
@@ -57,10 +68,10 @@
               Although some parents attend for help with their adult children, most have children between ages 13 and 22.
             </div>
           </div>
-        </div>
+        </div>        
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What behaviors can Changes help me address?</button>
+            <button class="accordion-button collapsed px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What behaviors can Changes help me address?</button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
@@ -79,7 +90,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What makes Changes unique from other support groups?
+            <button class="accordion-button collapsed px-4 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What makes Changes unique from other support groups?
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -90,7 +101,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How are meetings structured?
+            <button class="accordion-button collapsed px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How are meetings structured?
             </button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -109,7 +120,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">What can I expect when I attend my first Changes meeting?
+            <button class="accordion-button collapsed px-4 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">What can I expect when I attend my first Changes meeting?
             </button>
           </h2>
           <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
@@ -120,7 +131,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">What is a Changes Team?
+            <button class="accordion-button collapsed px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">What is a Changes Team?
             </button>
           </h2>
           <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
@@ -137,8 +148,8 @@
           </div>
         </div>
       </div>
-      <div class="text-center px-5">
-        <h2 class="display-2 text-center pt-5 text-info">Are you thinking of attending a meeting?</h2>
+      <div class="text-center bg-info p-4">
+        <h2 class="display-2 text-center pt-3 text-white">Are you thinking of attending a meeting?</h2>
         <!-- Button trigger modal -->
         <button  class="btn btn-lg btn-info text-white btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Get Help</button>
         <!-- Modal -->
@@ -159,7 +170,7 @@
           </div>
         </div>
       </div>
-      <form class="p-5" id="contactForm" name="contactForm" method="GET">
+      <form class="bg-light p-5" id="contactForm" name="contactForm" method="GET">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" name="name" id="name" placeholder="At least first name required" required>
