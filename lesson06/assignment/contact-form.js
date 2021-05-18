@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function(){
         name: field.name,
         value: field.value
       });
-
-
     });
     return(arr);
   };
@@ -35,6 +33,6 @@ document.addEventListener("DOMContentLoaded", function(){
   var form = document.querySelector('#contactForm');
   var data = serializeArray(form);
   console.log(data);
-
+  alert('Hang in there, help is on the way! You will be contacted by a Changes representative.')
   })
 })
