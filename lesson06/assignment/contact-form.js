@@ -39,3 +39,27 @@ document.addEventListener("DOMContentLoaded", function(){
   alert('Hang in there, help is on the way! You will be contacted by a Changes representative.')
   })
 })
+
+
+// email signup form
+document.addEventListener("DOMContentLoaded", function(){
+
+  // Find the the form, and handle its submit event
+  const newsSignUp = document.querySelector('#newsSignUp')
+
+  newsSignUp.addEventListener('submit', function(event){
+  // Prevent the form from trying to submit to a server
+    event.preventDefault()
+  
+    // access input data
+    var formMap = {};
+    var formElems = document.querySelectorAll('#newsSignUp [name]');
+    for(var i = 0; i < formElems.length; i++){
+      var elem = formElems[i];
+      formMap[elem.name] = elem.value;
+    }
+    console.log(formMap);
+    // alert when form has been successfully submitted
+    alert('Thank you. You are now signed up for news from Changes')
+  })
+})
