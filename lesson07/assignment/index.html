@@ -55,20 +55,20 @@
       <div class="cpsn" id="app">
         <div class="parent-info">
           <!-- <h1>{{ parent }}</h1> -->
-          <button v-if="!imageShowing" v-on:click="toggleImage">My adult son won't move out of my home!</button>
+          <button v-if="!imageShowing" v-on:click="toggleImage">Help, my adult son won't move out of my home!</button>
           <button v-if="imageShowing" v-on:click="toggleImage">You need Changes! Call 1-888-000-0000</button>
           <img v-if="imageShowing" v-bind:src="image" width="500">
 
-          <h2>One-Liners help to end conversations preventing arguments and conflict.</h2>
-          <button>Reduce Useless Conflict:</button>
+          <h1>One-Liners help to end conversations preventing arguments and conflict.</h1>
+          <h2>Reduce Useless Conflict:</h2>
           <ul>
             <li v-for="conflict in conflicts">{{ conflict }}</li>
           </ul>
-          <h3>Define Boundaries:</h3>
+          <h2>Define Boundaries:</h2>
           <ul>
             <li v-for="boundary in boundarys">{{ boundary }}</li>
           </ul>
-          <h3>Endorse Your Child’s Capabilities:</h3>
+          <h2>Endorse Your Child’s Capabilities:</h2>
           <ul>
             <li v-for="support in supports">{{ support }}</li>
           </ul>
