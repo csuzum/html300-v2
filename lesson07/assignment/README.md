@@ -1,53 +1,20 @@
-# Assignment 07 - Vue CLI
+# Assignment 05 - CSS Grid & Flexbox
 
-In the last assignment in lesson06, you created a responsive website with Bootstrap 4. In this assignment, you'll convert those pages and rebuild them with Vue CLI.
+Build a web page that you'd like to include in your final project that has a layout based off the provided mockup. Use CSS grid for the page layout, and flexbox where appropriate within the content areas. This page may be edited later before being added in to the final site, if this isn't a layout you'd like to keep, but for now create it using content (text, images) that you want in the final site.
 
-### References
-- [Vue Docs](https://vuejs.org/v2/guide/)
-- [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
-- [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-- [Adding Bootstrap to Vue CLI](https://travishorn.com/adding-bootstrap-to-a-vue-cli-project-98c2a30e0ed0)
-- [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
+[Design Spec Link](https://xd.adobe.com/spec/8117a5c5-ebde-471d-7eb0-c67b3578aeba-f726/) (doesn't require download/install of XD). Inside the lesson05/assignment/ref directory is a mockup of the layout in several different file types for quick reference.
 
 ### To get started:
-- 	Fetch from the upstream master and merge with your local master as we start each lesson
--	In your forked repo, create a new branch off of master called `lesson-07` or similar
--   Navigate to the root folder of this assignment within terminal in your fork, `lesson07/assignment`
-- 	Install the Vue CLI if you haven't already with `npm install -g @vue/cli`
-	- 	If installed correctly, running `vue --version` should return a number
-
-###	Create your project using Vue CLI:
-
--	Follow the instructions in the Vue CLI documentation: https://cli.vuejs.org/guide/creating-a-project.html. Pass the "--no-git" flag to the create command, to prevent it from initializing the new project as a git repository (necessary because the html300 directory is a repository already, and having nested repositories leads to major problems with git).
-	- Choose "default" preset, rather than choosing features manually.
-	- If you're not sure whether to use npm or yarn, choose npm.
-
-![Screenshot of creating using Vue CLI v4.4.6](vue-create.png)
-
--	Once done, `cd` into the project
-- 	Installing scss (in your project directory)
-	-	npm command: run `npm install -D sass-loader sass`
-	-	yarn command: run `yarn add sass-loader sass`
--	Installing and using Bootstrap (in your project directory)
-	-	npm command: run `npm install popper.js`
-	-	yarn command: run `yarn add popper.js`
-	- Follow the "Getting Started" guide for Bootstrap Vue to make the package available in your project. "Using Module Bundlers" is the applicable section: https://bootstrap-vue.org/docs#using-module-bundlers.
--	You now have access to scss and all of bootstrap/bootstrap-vue. Watch the screencast for more information on using bootstrap-vue components and bootstrap features in Vue, as well as turning the bootstrap nav into an app router
--	In the project's README.md, find instructions to compile and hot reload for development. This will start the development server.
-
-
-### Build out the Project
-
-- 	Now, convert the 4 pages from lesson06 to components, then set paths in your router to those imported components. Meet the following requirements:
-	-	All repeated content must be from variables in the `<script>` part of the `.vue` page, using `v-for` to iterate through and build the content
-		- 	This means the content should not be hardcoded, but set in the script and populated on the page with Vue methods
-	- 	You must use at least one `v-if` `v-else` statement to change content or UI.
-	- 	For the image page, use a `v-for` loop to iterate through an array of images.
-	- 	For the accordion page, use a `v-for` to iterate through an object to fill out the content in an accordion.
-	-	Use of Vue router to navigate component pages
-	- 	Don't forget to add comments to your code explaining Bootstrap 4 classes you added and your VUE code.
-- 	**Bonus:**  Use VUE to change the CSS. 
-- 	**Extra Bonus:**  Have an input box that changes the content as the user types. 
+-   Navigate to the root folder of this assignment within terminal in your fork, `lesson05/assignment`
+-   Run `npm install`
+-   Run `npx gulp`
+-   Write new code in index.html and the appropriate .scss files to create a page that matches the provided layout.
+-   Use CSS Grid for the overall page layout and flexbox for aligning the content within.
+- Use media queries to make the layout responsive, with a design of your choosing.
+- 	Fill in each area's content to build a page that you plan to include in your final project. If the page will rely on API data, you can use dummy data (lorem ipsum, placeholder images) for those parts.
+-   Include at least five nav items and align them as shown in mockup. If your final project won't have five pages, it's okay to use dummy data for some of the nav items.
+-   Remember, when building out fluid/responsive layouts, giving components and content areas fixed heights is something to generally avoid. Let the content fill the space, and use padding/margin for whitespace.
+- 	**Bonus:**  Use grid templating and try out the repeat and autofill techniques
 
 ### To Submit:
 - Create a Pull Request for your assignment branch to your forked master

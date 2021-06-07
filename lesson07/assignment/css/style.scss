@@ -1,0 +1,481 @@
+// Import partials here
+@import 'base.normalize';
+@import 'settings.variables';
+@import 'settings.responsive';
+@import 'components.content';
+
+// media queries
+@mixin tablet {
+  @media screen and (max-width: 860px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 567px) {
+    @content;
+  }
+}
+
+// display only on mobile 
+#mobileShow {
+  display: block;
+}
+@media screen and (min-width: 500px) {
+  #mobileShow {
+    display: none;
+  }
+}
+
+// does not display on mobile
+#mobileHide {
+  display: block;
+}
+@media only screen and (min-width: 320px) and (max-width: 567px) {
+  #mobileHide {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $sans-serif;
+  background-color: $gray;
+  @include mobile {
+    background-color: $white;
+  }
+
+  main {
+    background-color: $white;
+  }
+
+  .main-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr 2fr;
+    grid-template-areas: "header header header header header" 
+    "hero hero hero hero hero" 
+    ". content content content ." 
+    ". highlight1 highlight1 highlight2 highlight2" 
+    "footer footer footer footer footer";
+    @include mobile {
+      grid-template-areas: "header" "hero" "quote" "content" "intro" "highlight1" "highlight2" "footer";
+    }
+
+    .cpsn {
+      grid-area: content;
+      height: 55rem;
+    }
+
+    // header section
+    &__header {
+      grid-area: header;
+      height: 8rem;
+      display: grid;
+      grid-template-columns: 2fr 8fr 1.5fr;
+      grid-template-areas: "logo call donate" "logo nav donate";
+      @include mobile {
+        height: auto;
+        grid-template-areas: "logo logo logo" "call call call" "donate donate donate" "nav nav nav"
+      }
+      &__logo {
+        grid-area: logo;
+        padding: 1.2rem 0rem 0rem 3rem;
+        @include mobile {
+          display: unset;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 5rem 0rem 0rem 0rem;
+        }
+        &__img {
+          width: 12rem;
+          @include mobile {
+            width: 30rem;
+          }
+        }
+      }
+      &__call {
+        grid-area: call;
+        font-size: 1.5rem;
+        font-weight: $medium;
+        color: $changes-blue;
+        text-align: right;
+        margin: 0;
+        padding: 1.3rem 1.5rem 0rem 0rem;
+        @include mobile {
+          font-size: 3.5rem;
+          text-align: center;
+          padding: 4rem;
+        }
+        &__phone {
+          font-weight: $bold;
+        }
+      }
+      &__donate {
+        grid-area: donate;
+        display: flex;
+        align-items: center;
+        background-color: $orange;
+        color: white;
+        @include mobile {
+          height: 8rem;
+        }
+        &__p {
+          font-size: 1.5rem;
+          font-weight: $bold;
+          margin-left: auto;
+          margin-right: auto;
+          @include mobile {
+            font-size: 3rem;
+          }
+        }
+      }
+      &__nav {
+        grid-area: nav;
+        text-align: right;
+        padding: 1.5rem 0rem 1rem 0rem;
+        &__items {
+          font-size: 1.2rem;
+          display: flex;
+          // justify-content: space-between;
+          list-style-type: none;
+          @include mobile {
+            display: unset;
+            font-weight: $bold;
+            font-size: 3.5rem;
+            line-height: 6.5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    // hero image
+    &__hero {
+      grid-area: hero;
+      font-family: $sans-serif;
+      font-weight: $light;
+      &__img {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+
+
+
+// Vue navbar
+a, a:visited {
+	// outline:none;
+	// color:white;
+}
+
+a:hover{
+	text-decoration: none;
+} 
+
+nav{
+	display:inline-block;
+    // color: black;
+	// margin:60px auto 45px;
+	// background-color: $white;
+	// box-shadow:0 1px 1px #ccc;
+	// border-radius:2px;
+}
+
+nav a{
+	display:inline-block;
+	padding: 1rem 1.5rem;
+	color:black;
+	// font-weight:bold;
+	// font-size:16px;
+	text-decoration:none;
+	// line-height:1;
+	background-color:transparent;
+
+	-webkit-transition:background-color 0.25s;
+	-moz-transition:background-color 0.25s;
+	transition:background-color 0.25s;
+}
+
+// nav a:first-child{
+// 	border-radius:2px 0 0 2px;
+// }
+
+// nav a:last-child{
+// 	border-radius:0 2px 2px 0;
+// }
+
+nav.home .home,
+nav.about .about,
+nav.get-help .get-help,
+nav.news .news,
+nav.contact .contact{
+  color: white;
+  background-color:$changes-blue;
+}
+
+
+
+
+
+    // quote section only appears on mobile
+    &__quote {
+      grid-area: quote;
+      background-color: $orange;
+      color: $white;
+      &__head {
+        font-weight: $light;
+        font-size: 6rem;
+        text-align: center;
+        line-height: 4rem;
+      }
+      &__p {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding: 0rem 4rem 3rem 4rem;
+      }
+    }
+
+    // main content section
+    &__content {
+      grid-area: content;
+      font-family: $sans-serif;
+      font-weight: $light;
+      padding: 1rem 3rem 2rem 0rem;
+      @include mobile {
+        width: 95%;
+        padding: 1rem 4rem 1rem 4rem;
+      }
+      &__h1 {
+        font-size: 1.9rem;
+        font-weight: $medium;
+        color: $changes-blue;
+        margin-top: 1rem;
+        @include mobile {
+          font-size: 3.2rem;
+          text-align: center;
+        }
+      }
+      &__p {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        @include mobile {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          text-align: center;
+          padding-bottom: 2rem;
+        }
+      }
+    }
+
+    // aside only appears on desktop
+    &__aside {
+      width: 23rem;
+      grid-row-start: hero-start;
+      grid-row-end: footer-start;
+      grid-column-start: hero-start;
+      z-index: 1;
+      &__h1 {
+        color: $white;
+        font-size: 4rem;
+        font-weight: $light;
+        line-height: 4rem;
+        text-align: center;
+        padding: 2rem 0 2rem 0;
+        margin: 0;
+      }
+      &__box {
+        background-color: $orange;
+        border-top: 1rem solid white;
+        border-right: 1rem solid white;
+        padding: 2rem 0rem;
+        &__p {
+          font-size: 1.6rem;
+          line-height: 2.3rem;
+          font-weight: $light;
+          color: $white;
+          text-align: center;
+          padding: 1rem 2rem 2rem 2rem;
+          &__father {
+            font-size: 1.3rem;
+            font-style: italic;
+          }
+        }
+        &__wrapper {
+          &__intro {
+            background-color: $dark-gray;
+            height: 3rem;
+            color: $white;
+            font-weight: $light;
+            font-size: 1.4rem;
+            text-align: center;
+            padding-top: .5rem;
+            margin: 0;
+          }
+          &__img {
+            width: 22rem;
+          }
+        }
+        &__mission {
+          font-size: 1.6rem;
+          line-height: 2.3rem;
+          font-weight: $light;
+          color: $white;
+          text-align: center;
+          padding: 0rem 2rem 1rem 2rem;
+          &__head {
+            font-weight: $medium;
+            text-transform: uppercase;
+            padding-top: 2rem;
+          }
+        }
+      }
+    }
+
+    // intro only appears on mobile
+    &__intro {
+      grid-area: intro;
+      background-color: $orange;
+      padding-bottom: 2rem;
+      &__head {
+        background-color: $dark-gray;
+        height: 8rem;
+        color: $white;
+        font-weight: $light;
+        font-size: 4rem;
+        text-align: center;
+        padding-top: 1.5rem;
+        margin: 0;
+      }
+      &__img {
+        width: 100%;
+      }
+      &__MV {
+        font-size: 4rem;
+        line-height: 2.3rem;
+        font-weight: $light;
+        color: $white;
+        text-align: center;
+        padding: 3rem 2rem 1rem 2rem;
+      }
+      &__p {
+        color: $white;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding: 0rem 4rem 2rem 4rem;
+      }
+    }
+
+    // highlight image/text sections
+    &__highlight1 {
+      grid-area: highlight1;
+      width: 22rem;
+      @include mobile {
+        width: 100%;
+      }
+      &__img {
+        width: 22rem;
+        @include mobile {
+          width: 100%;
+        }
+      }
+      &__p {
+        font-size: 1.2rem;
+        font-weight: $light;
+        line-height: 1.8rem;
+        padding: 1rem 0rem;
+        @include mobile {
+          width: 90%;
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          text-align: center;
+          padding: 2rem 0rem 2rem 3rem;
+        }
+      }
+    }
+    &__highlight2 {
+      grid-area: highlight2;
+      width: 22rem;
+      @include mobile {
+        width: 100%;
+      }
+      &__img {
+        width: 22rem;
+        @include mobile {
+          width: 100%;
+        }
+      }
+      &__p {
+        font-size: 1.2rem;
+        font-weight: $light;
+        line-height: 1.8rem;
+        padding: 1rem 0rem;
+        @include mobile {
+          width: 90%;
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          text-align: center;
+          padding: 2rem 0rem 2rem 3rem;
+        }
+      }
+    }
+
+    // footer section
+    &__footer {
+      grid-area: footer;
+      display: flex;
+      background-color: $med-gray;
+      font-weight: $light;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      color: white;
+      height: auto;
+      margin-top: 1rem;
+      padding: 3rem 4rem 3rem 4rem;
+      &__changes {
+        width: 28rem;
+        &__logo {
+          width: 12rem;
+        }
+        &__phone {
+          font-size: 1.4rem;
+          line-height: 2.8rem;
+        }
+      }
+      &__signup {
+        width: 22rem;
+        padding-right: 3rem;
+        &__heading {
+          font-weight: $bold;
+          line-height: 3rem;
+        }
+      }
+      &__connect {
+        width: 16rem;
+        &__heading {
+          font-weight: $bold;
+          line-height: 3rem;
+        }
+        &__social {
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem 0rem;
+        }
+        &__copyright {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
